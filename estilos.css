@@ -1,0 +1,27 @@
+h1,h2{
+    text-align: center;
+}
+h2{
+    background-color: rgb(202, 143, 204);
+}
+.canvas-container{
+    display: grid;
+    position: relative; 
+    background-color: rgb(189, 212, 233);
+}
+.canvas-info{
+    width: 58%;
+    position: absolute;
+    top: 0; 
+    background-color: rgb(189, 212, 233);
+}
+canvas{
+    width: 40%;
+    margin: 20px 0;
+    position: absolute;
+    right: 0.5%;
+
+}
+p{
+    margin-left: 15px;
+}
