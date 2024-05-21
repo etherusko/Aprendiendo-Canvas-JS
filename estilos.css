@@ -1,9 +1,14 @@
-h1,h2{
+h1,h2,h3{
     text-align: center;
 }
 h2{
     margin: 0 ;
-    background-color: rgb(202, 143, 204);
+}
+span{
+    font-weight: bold;
+}
+.span-blue{
+    color: blue;
 }
 .canvas-container{
     display: flex;
@@ -11,12 +16,11 @@ h2{
     gap: 1%;
     height: 70vh;
     margin: 0 1vw;
-    background-color: rgb(189, 212, 233);
+    background-color: rgb(66, 66, 68);
 }
 .canvas-info{
     flex: 7;
     margin-left: 1%;
-    background-color: rgb(149, 119, 177);
     
 }
 canvas{
@@ -24,6 +28,7 @@ canvas{
     min-width: 0px; 
 }
 p{
-    text-align: justify;
-    margin: 10px 5px
+    /*text-align: justify;*/
+    font-size: 17.5px;
+    margin: 12px 5px
 }
