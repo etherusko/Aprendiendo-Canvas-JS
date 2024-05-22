@@ -21,7 +21,8 @@ span{
 .canvas-info{
     flex: 7;
     margin-left: 1%;
-    
+    height: 100%;
+    overflow-y: scroll;
 }
 canvas{
     flex: 4;
@@ -32,4 +33,17 @@ p{
     /*text-align: justify;*/
     font-size: 17.5px;
     margin: 12px 5px
+}
+.seccion-de-botones{
+    display: flex;
+    justify-content: center;
+    gap: 27px;
+}
+.seccion-de-botones button{
+    width: 90px;
+    height: 27px;
+}
+.input-color{
+    background: none;
+    border-style: none;
 }

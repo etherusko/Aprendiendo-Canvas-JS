@@ -10,7 +10,7 @@
 <body>
     <h1>Aprendiendo Canvas JS</h1>
     <section class="canvas-container">
-        <div class="canvas-info">
+        <div id="ej" class="canvas-info">
             <article>
                 <header><h2>Basics</h2></header>
                 <p>Canvas es una etiqueta de html que nos proporciona un area para utilizar como lienzo. Se utiliza
@@ -26,10 +26,28 @@
                 </p>
                 <h3>Métodos de context "2d"</h3>
                 <p>Veamos a continuación algunos métodos del contexto 2d:</p>
-                <p>Dibuja un rectángulo en el canvas con el método .fillRect() 
-                    <button id="B-rectangulo">Dibujar</button>
+                <p>Con los métodos <span class="span-blue">fillRect()</span> y <span class="span-blue">strokeRect()</span> 
+                podemos dibujar un rectángulo en el canvas. Como su nombre indica, fillRect rellenará todo el area del 
+                rectángulo; mientras que strokeRect solo dibujará el contorno.</p>
+                <p>Has clic en los siguientes botones para ver su efecto en el canvas:</p>
+                <section class="seccion-de-botones">
+                    <button id="B-rectangulo">fill_Rect</button>
+                    <button id="B-rectanguloStroke">stroke_Rect</button>
+                    <button id="B-borrar">Borrar</button>
+                </section>
+                <p>Las propiedades <span class="span-blue">fillStyle</span> y <span class="span-blue">strokeStyle</span> 
+                    Nos permiten asignar el color con el se va a dibujar en el canvas. Selecciona un color y vuelve a
+                    dibujar en el canvas con los botones anteriores.
                 </p>
-                <button id="B-borrar">Borrar</button>
+                <section class="seccion-de-botones">
+                    <span style="color: blue;"> fillStyle = <input type="color" value="#DA511F" id="color-selector-fill" class="input-color"></span>
+                    <span style="color: blue;"> strokeStyle = <input type="color" value="#DA511F" id="color-selector-stroke" class="input-color"></span>
+                </section>
+                <p>Tambien podemos dibujar circulos/discos con los métodos <spam style="color: blue;">beginPath()</spam> 
+                    y <spam style="color: blue;">arc()</spam></p>
+                <section class="seccion-de-botones">
+                    <button id="B-arc">arc</button>
+                </section>
                 <footer>         
                     <p><small>
                         Documentación:<br>
