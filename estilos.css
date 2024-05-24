@@ -2,7 +2,7 @@ h1,h2,h3{
     text-align: center;
 }
 h2{
-    margin: 0 ;
+    margin: 5px ;
 }
 span{
     font-weight: bold;
@@ -12,7 +12,7 @@ span{
 }
 .canvas-container{
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 1%;
     height: 70vh;
     margin: 0 1vw;
@@ -38,6 +38,8 @@ p{
     display: flex;
     justify-content: center;
     gap: 27px;
+    align-items: center;
+    margin: 10px 0;
 }
 .seccion-de-botones button{
     width: 90px;
@@ -46,4 +48,10 @@ p{
 .input-color{
     background: none;
     border-style: none;
+}
+.input-number{
+    width: 40px;
+}
+footer a{
+    padding-right: 15px;
 }

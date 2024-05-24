@@ -5,16 +5,30 @@ const cw = 500;
 const ch = 500;
 canvas.width = cw;
 canvas.height = ch;
-
+/*Botones*/
 const btnRect = document.getElementById("B-rectangulo");
 const btnRectStroke = document.getElementById("B-rectanguloStroke");
 const btnClean = document.getElementById("B-borrar");
 const btnArc = document.getElementById("B-arc");
+const btnRectFull = document.getElementById("B-rectangulo-full");
 
 btnRect.addEventListener("click",() => drawRectArea(50,50));
 btnRectStroke.addEventListener("click",() => drawRectStroke(50,50));
 btnClean.addEventListener("click",limpiarCanvas);
 btnArc.addEventListener("click",() => drawArc(30));
+btnRectFull.addEventListener("click",() => drawRectAreaFull());
+
+/*Inputs*/
+const inputX = document.getElementById("fillRect-x-input");
+const inputY = document.getElementById("fillRect-y-input");
+const inputW = document.getElementById("fillRect-width-input");
+const inputH = document.getElementById("fillRect-height-input");
+
+inputX.addEventListener("input",() => drawRectAreaFull());
+inputY.addEventListener("input",() => drawRectAreaFull());
+inputW.addEventListener("input",() => drawRectAreaFull());
+inputH.addEventListener("input",() => drawRectAreaFull());
+
 
 function drawRectArea(x,y){
     limpiarCanvas();
@@ -40,5 +54,11 @@ function drawArc(x){
     ctx.stroke();
 }
 
-
-
+function drawRectAreaFull(){
+    limpiarCanvas();
+    ctx.fillStyle = document.getElementById("color-selector-fill").value;
+    ctx.fillRect(inputX.value,
+                 inputY.value,
+                 inputW.value,
+                 inputH.value);
+}

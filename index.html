@@ -11,7 +11,7 @@
     <h1>Aprendiendo Canvas JS</h1>
     <section class="canvas-container">
         <div id="ej" class="canvas-info">
-            <article>
+            <article> <!--Basics-->
                 <header><h2>Basics</h2></header>
                 <p>Canvas es una etiqueta de html que nos proporciona un area para utilizar como lienzo. Se utiliza
                     para hacer animaciones con <span style="color: yellow;">java scritp</span> o para programar juegos.
@@ -24,42 +24,61 @@
                     DOMString</span>, el cual define el contexto de dibujo. Se utiliza <span style="color: rgb(218, 81, 31);">
                     "2d"</span> o <span style="color: rgb(218, 81, 31);">"webgl"</span> para dibujar en 3D.
                 </p>
-                <h3>Métodos de context "2d"</h3>
+            </article>
+            <article> <!--Métodos de context "2d"-->
+                <header><h3>Métodos de context "2d"</h3></header>
                 <p>Veamos a continuación algunos métodos del contexto 2d:</p>
                 <p>Con los métodos <span class="span-blue">fillRect()</span> y <span class="span-blue">strokeRect()</span> 
                 podemos dibujar un rectángulo en el canvas. Como su nombre indica, fillRect rellenará todo el area del 
                 rectángulo; mientras que strokeRect solo dibujará el contorno.</p>
                 <p>Has clic en los siguientes botones para ver su efecto en el canvas:</p>
-                <section class="seccion-de-botones">
+                <div class="seccion-de-botones">
                     <button id="B-rectangulo">fill_Rect</button>
                     <button id="B-rectanguloStroke">stroke_Rect</button>
                     <button id="B-borrar">Borrar</button>
-                </section>
+                </div>
                 <p>Las propiedades <span class="span-blue">fillStyle</span> y <span class="span-blue">strokeStyle</span> 
                     Nos permiten asignar el color con el se va a dibujar en el canvas. Selecciona un color y vuelve a
                     dibujar en el canvas con los botones anteriores.
                 </p>
-                <section class="seccion-de-botones">
+                <div class="seccion-de-botones">
                     <span style="color: blue;"> fillStyle = <input type="color" value="#DA511F" id="color-selector-fill" class="input-color"></span>
                     <span style="color: blue;"> strokeStyle = <input type="color" value="#DA511F" id="color-selector-stroke" class="input-color"></span>
-                </section>
+                </div>
                 <p>Tambien podemos dibujar circulos/discos con los métodos <spam style="color: blue;">beginPath()</spam> 
                     y <spam style="color: blue;">arc()</spam></p>
-                <section class="seccion-de-botones">
+                <div class="seccion-de-botones">
                     <button id="B-arc">arc</button>
-                </section>
-                <footer>         
-                    <p><small>
-                        Documentación:<br>
-                        <a  href="https://developer.mozilla.org/es/docs/Web/API/HTMLCanvasElement"
-                            target="_blank" rel="noreferrer">mdn</a>
-                    </small></p>
-                </footer>
+                </div>
             </article>
+            <article> <!--Parámetros-->
+                <header><h3>Parámetros</h3></header>
+                <p>Veamos ahora que parametros reciben cada uno de los métodos que hemos visto:</p>
+                <p>fillRect(x,y,ancho,largo) Recibe 4 parámetros. x,y representan las cordenadas (posicion) en las
+                    que dibujamos el rectángulo; ancho y largo representan sus dimensiones.
+                </p>
+                <div class="seccion-de-botones">
+                    <span style="color: blue;"> x = <input type="number" value="225" id="fillRect-x-input" class="input-number"></span>
+                    <span style="color: blue;"> y = <input type="number" value="225" id="fillRect-y-input" class="input-number"></span>
+                    <span style="color: blue;"> ancho = <input type="number" value="50" id="fillRect-width-input" class="input-number"></span>
+                    <span style="color: blue;"> alto = <input type="number" value="50" id="fillRect-height-input" class="input-number"></span>
+                </div>
+                <div class="seccion-de-botones">
+                  <p>Dibujar Rectángulo: </p><button id="B-rectangulo-full">Dibujar</button>
+                </div>
+            </article>
+            <footer>         
+                <p><small>
+                    Documentación:<br>
+                    <a  href="https://developer.mozilla.org/es/docs/Web/API/HTMLCanvasElement"
+                        target="_blank" rel="noreferrer">canvas</a>
+                    <a  href="https://developer.mozilla.org/es/docs/Web/API/CanvasRenderingContext2D"
+                        target="_blank" rel="noreferrer">context2D</a>
+                </small></p>
+            </footer>
         </div>
         <canvas id="canvas"></canvas>
-        <script src="main.js"></script>
     </section>
-
+    <script src="main.js"></script>
 </body>
 </html>
